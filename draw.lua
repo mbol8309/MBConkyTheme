@@ -39,20 +39,35 @@ function draw_boxes(x, y, width, height, radius)
 end
 
 function conky_main()
-    if conky_window ~= nil then 
-        draw_boxes(0, 0, conky_window.width, 70, 10)
-        
-        draw_boxes(0, 85, conky_window.width, 140, 10)
-        
-        draw_boxes(0, 245, conky_window.width, 55, 10)
-        
-        draw_boxes(0, 315, conky_window.width, 65, 10)
-        
-        draw_boxes(0, 395, conky_window.width, 180, 10)
-        draw_boxes(0, 600, conky_window.width, 70, 10)
-        draw_boxes(0, 685, conky_window.width, 90, 10)
-        draw_boxes(0, 790, conky_window.width, 90, 10)
-        draw_boxes(0,895,conky_window.width, 90, 10)
+    if conky_window ~= nil then
+        local y = 0
+        local height = 80
+        local sep = 20
+        draw_boxes(0, y, conky_window.width, height, 10)
+        y = y + height + sep
+        height = 140
+        draw_boxes(0, y, conky_window.width, height, 10)
+        y = y + height + sep
+        height = 55
+        draw_boxes(0, y, conky_window.width, height, 10)
+        y = y + height + sep
+        height = 65
+        draw_boxes(0, y, conky_window.width, height, 10)
+        y = y + height + sep
+        height = 180
+        draw_boxes(0, y, conky_window.width, height, 10)
+        y = y + height + sep
+        height = 70
+        draw_boxes(0, y, conky_window.width, height, 10)
+        y = y + height + sep
+        height = 80
+        draw_boxes(0, y, conky_window.width, height, 10)
+        y = y + height + sep
+        height = 90
+        draw_boxes(0, y, conky_window.width, height, 10)
+        y = y + height + sep
+        height = 90
+        draw_boxes(0,y,conky_window.width, height, 10)
     end
 -- quand fond nécessaire
 --    conky_draw_bg()
